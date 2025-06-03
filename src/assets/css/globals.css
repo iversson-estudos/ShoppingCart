@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root{
+    --font:"Mate SC", sans-serif;
+    --fontsize-small:16px;
+    --fontsize-medium:32px;
+    --fontsize-big: 64px;    
+    --bg-color: #020024;
+    --bg-gradient: linear-gradient(147deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 52%, rgba(255, 179, 0, 1) 100%);
+    
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;  
+    background: var(--bg-color);
+    background: var(--bg-gradient) ;
+    font-family:var(--font);
+    font-size:  var(--fontsize-medium);
+}
