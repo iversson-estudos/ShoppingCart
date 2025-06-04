@@ -5,9 +5,7 @@
     --fontsize-small:16px;
     --fontsize-medium:32px;
     --fontsize-big: 64px;    
-    --bg-color: #020024;
-    --bg-gradient: linear-gradient(147deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 52%, rgba(255, 179, 0, 1) 100%);
-    
+    --bg-color: wheat;
 }
 
 
@@ -16,7 +14,6 @@ body{
     width: 100vw;
     height: 100vh;  
     background: var(--bg-color);
-    background: var(--bg-gradient) ;
     font-family:var(--font);
     font-size:  var(--fontsize-medium);
 }
