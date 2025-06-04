@@ -7,7 +7,7 @@ export default function Homepage(){
         <div className={styles.homepageContainer}>
             <img src="/src/assets/images/homepageLogo.png"/>
             <button>
-                <Link to={'/'}>Lets Go Shopping</Link>
+                <Link to={'/main'}>Lets Go Shopping</Link>
             </button>
         </div>
     )
