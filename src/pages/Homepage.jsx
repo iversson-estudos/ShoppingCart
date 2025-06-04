@@ -1,10 +1,14 @@
-export default function Homepage(){
+import styles from "./Homepage.module.css"
+import { Link } from "react-router-dom"
 
+
+export default function Homepage(){
     return(
-        <div>
-            <p>
-                Hello World!
-            </p>
+        <div className={styles.homepageContainer}>
+            <img src="/src/assets/images/homepageLogo.png"/>
+            <button>
+                <Link to={'/'}>Lets Go Shopping</Link>
+            </button>
         </div>
     )
 }

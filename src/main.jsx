@@ -4,6 +4,7 @@ import './assets/css/globals.css'; // Then globals
 
 /*PAGES AND COMPONENTS*/
 import Homepage from './pages/Homepage';
+import MainPage from './pages/MainPage';
 
 /*OTHER IMPORTS*/
 import { StrictMode } from 'react'
@@ -15,6 +16,10 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path:"/",
+    element:<MainPage/>
+  },
+  {
+    path:"/homepage",
     element:<Homepage/>
   }
 ]);
