@@ -15,11 +15,11 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 /*ROUTER*/
 const router = createBrowserRouter([
   {
-    path:"/main",
+    path:"/",
     element:<MainPage/>
   },
   {
-    path:"/",
+    path:"/homepage",
     element:<Homepage/>
   }
 ]);

@@ -1,6 +1,23 @@
 .homepageContainer{
+    
+
     img{
-        width: 100vw;
+        width: 100%;
         max-height: 45vh;   
+    }
+    .linkContainer{
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .shoppingLink{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid purple;
+            text-decoration: none;
+            padding: 8px;
+        }
     }
 }
