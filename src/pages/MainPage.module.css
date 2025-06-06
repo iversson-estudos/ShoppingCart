@@ -1,14 +1,22 @@
 
 
 
-.sidebar{
-    display: flex;
+.sidebar{    
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    background-color: black;
+
 
     span{
-        font-size: 64px;
-        color:black;
+        padding: 8px;
+        font-size: 32px;
+        color:white;
+        transition: background-color 1s ease-in-out;
+    }
+    span:hover{
+        color: black;
+        background-color: white;
     }
 }
