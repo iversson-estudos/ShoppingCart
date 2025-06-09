@@ -7,13 +7,13 @@ export default function MainPage(){
     <div className={styles.app}> 
         <div className={styles.sidebar}>
             <Link className={styles.homepageButton} to='/'>
-                <span class="material-symbols-outlined">home</span>
+                <span className="material-symbols-outlined">home</span>
             </Link>
             <Link className={styles.shoppingButton} to='products/'>
-                <span class="material-symbols-outlined">search</span>
+                <span className="material-symbols-outlined">search</span>
             </Link>
             <Link className={styles.homepageButton} to='/'>
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <span className="material-symbols-outlined">shopping_cart</span>
             </Link>
         </div>
         <div className={styles.mainContainer}>
