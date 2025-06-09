@@ -6,7 +6,7 @@ import './assets/css/globals.css'; // Then globals
 import Homepage from './pages/Homepage';
 import MainPage from './pages/MainPage';
 import Products from './components/Products';
-import { productLoader } from './data/productLoader';
+import { loader as productLoader } from './components/Products';
 
 /*OTHER IMPORTS*/
 import { StrictMode } from 'react'
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     [
       {
         path:"products/",
+        loader:productLoader,
         element: <Products/>,
       },
     ]
@@ -33,7 +34,6 @@ const router = createBrowserRouter([
   }
 ]);
  
-productLoader();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

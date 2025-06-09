@@ -1,5 +1,8 @@
 import styles from "./MainPage.module.css"
-import { Link,Outlet } from "react-router-dom"
+import { Link,Outlet} from "react-router-dom"
+
+
+
 
 
 export default function MainPage(){
