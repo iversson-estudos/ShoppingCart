@@ -1,22 +1,33 @@
 
+.app{
+    display: flex;
+
+    .sidebar{    
+        position: fixed;
+        height: 100vh;
+        width: 48px;
+        z-index: 1; 
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
 
 
-.sidebar{    
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    background-color: black;
-
-
-    span{
-        padding: 8px;
-        font-size: 32px;
-        color:white;
-        transition: background-color 1s ease-in-out;
+        span{
+            font-size: 32px;
+            padding: 8px;
+            color:white;
+            transition: background-color 1s ease-in-out;
+        }
+        span:hover{
+            color: black;
+            background-color: white;
+        }
     }
-    span:hover{
-        color: black;
-        background-color: white;
+    .mainContainer{
+        margin-left: 48px;
     }
 }
