@@ -1,5 +1,6 @@
 import { productLoader } from "../data/productLoader"
 import { useLoaderData } from "react-router-dom";
+import styles  from "./Products.module.css"
 
 
 
@@ -15,10 +16,10 @@ export default function Products(){
     console.log({products});
 
     return(
-    <ul>
+    <ul className={styles.productContainer}>
         {products.map((product)=>(
-          <li key={product.id}>
-            <img src={product.image}/>
+          <li className={styles.product} key={product.id}>
+            <img className={styles.productImage} src={product.image}/>
           </li>
         ))}
     </ul>

@@ -1,0 +1,25 @@
+.productContainer{
+    display: grid;
+    grid-template-columns: 320px 320px;
+    grid-auto-rows: 320px;
+    column-gap: 64px;
+    row-gap: 64px;
+    
+    .product{
+        border: 10px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .productImage{
+            width: 300px;
+            height: 300px;
+            transition: transform 0.5s ease;
+        }
+        .productImage:hover{
+            transform: scale(1.2);
+        }
+    }
+
+
+}
