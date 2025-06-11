@@ -22,8 +22,35 @@ export default function Products(){
             <img className={styles.productImage} src={product.image}/>
             <p className={styles.productTitle}>{product.title}</p>
             <p>PRICE: ${product.price}</p>
+            {ProductRating(product)}
           </li>
         ))}
     </ul>
     )
+}
+
+function ProductRating(product){
+  const rating = Math.floor(product.rating.rate);
+  let stars = [];
+
+  for(let i=1;i<=5;i++){
+    if(i<=rating){
+      stars.push(
+      <span className={`material-symbols-outlined ${styles.colored}`}>
+        star
+      </span>
+      );
+    }else{
+      stars.push(
+      <span className="material-symbols-outlined">
+        star
+      </span>)
+    }
+  }
+  
+  return(
+    <div className={styles.productRating}>
+     {stars}
+    </div>
+  )
 }

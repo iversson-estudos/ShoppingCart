@@ -15,5 +15,6 @@ body{
     height: 100vh;  
     background: var(--bg-color);
     font-family:var(--font);
-    font-size:  var(--fontsize-small);
+    font-size:  var(--fontsize-small);   
 }
+
