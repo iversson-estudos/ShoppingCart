@@ -30,5 +30,7 @@
     }
     .mainContainer{
         margin-left: 48px;
+        display: flex;
+        justify-content: space-around;
     }
 }   

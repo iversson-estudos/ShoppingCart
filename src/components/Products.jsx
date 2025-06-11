@@ -20,6 +20,8 @@ export default function Products(){
         {products.map((product)=>(
           <li className={styles.product} key={product.id}>
             <img className={styles.productImage} src={product.image}/>
+            <p className={styles.productTitle}>{product.title}</p>
+            <p>PRICE: ${product.price}</p>
           </li>
         ))}
     </ul>
