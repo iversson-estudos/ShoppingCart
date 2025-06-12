@@ -23,7 +23,12 @@ export default function Products(){
             <p className={styles.productTitle}>{product.title}</p>
             {ProductRating(product)}
             <p>--------------------------------------------------</p>
-            <p className={styles.productPrice}>${product.price}</p>
+            <div className={styles.productBuyDiv}>
+               <p className={styles.productPrice}>${product.price}</p>
+               <button>
+                  <span className="material-symbols-outlined">add_shopping_cart</span>
+               </button>
+            </div>
           </li>
         ))}
     </ul>
