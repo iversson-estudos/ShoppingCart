@@ -13,23 +13,22 @@ export async function loader(){
 
 export default function Products(){
     const {products} = useLoaderData();
-    console.log({products});
 
     return(
     <ul className={styles.productContainer}>
         {products.map((product)=>(
-          <li className={styles.product} key={product.id}>
+        <li className={styles.product} key={product.id}>
             <img className={styles.productImage} src={product.image}/>
             <p className={styles.productTitle}>{product.title}</p>
             {ProductRating(product)}
-            <p>--------------------------------------------------</p>
             <div className={styles.productBuyDiv}>
                <p className={styles.productPrice}>${product.price}</p>
-               <button>
+               <button className={styles.addToCartButton}>
                   <span className="material-symbols-outlined">add_shopping_cart</span>
                </button>
             </div>
           </li>
+        
         ))}
     </ul>
     )
