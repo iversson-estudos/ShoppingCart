@@ -1,6 +1,6 @@
 import localforage from "localforage";
 
-export  async function loadCart(){
+export async function loadCart(){
 try{    
     const cart = await localforage.getItem('cart');
     return cart;
@@ -9,7 +9,7 @@ try{
 }}
 
 
-export  async function addItemToCart(itemId,quantity){
+export async function addItemToCart(itemId,quantity){
     let cart = await loadCart();
     let index = cart.findIndex(item=>item.id===itemId);
     if(index>-1){
