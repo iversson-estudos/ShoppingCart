@@ -28,7 +28,6 @@ export default function Products(){
                </button>
             </div>
           </li>
-        
         ))}
     </ul>
     )
