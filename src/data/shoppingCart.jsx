@@ -1,24 +1,30 @@
 import localforage from "localforage";
 
 export async function loadCart(){
+
 try{    
     const cart = await localforage.getItem('cart');
-    return cart;
+    if(cart){
+        return cart;
+    }else{
+        return false;
+    }
 }catch(err){
     console.log(err);
 }}
 
 
-export async function addItemToCart(itemId,quantity){
-    let cart = await loadCart();
-    let index = cart.findIndex(item=>item.id===itemId);
+export async function addItemToCart(itemId,quantity){   
+    let cart = await loadCart() || [];
+    let index = cart.findIndex(item=>item.itemId===itemId);
+
     if(index>-1){
         cart[index] = {itemId,quantity};
     }else{
-        cart.push({itemId,quantity});
+         cart.push({itemId,quantity});
     }
+    
     await set(cart);
-    return true;
 }
 
 
