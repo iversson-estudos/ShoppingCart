@@ -14,14 +14,14 @@ try{
 }}
 
 
-export async function addItemToCart(itemId,quantity){   
+export async function addItemToCart(id,quantity){   
     let cart = await loadCart() || [];
-    let index = cart.findIndex(item=>item.itemId===itemId);
+    let index = cart.findIndex(item=>item.ItemId===id);
 
     if(index>-1){
-        cart[index] = {itemId,quantity};
+        cart[index] = {ItemId:id,Quantity:quantity};
     }else{
-         cart.push({itemId,quantity});
+         cart.push({ItemId:id,Quantity:quantity});
     }
     
     await set(cart);
