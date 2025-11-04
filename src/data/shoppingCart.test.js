@@ -1,4 +1,4 @@
-import { expect,test } from "vitest";
+import { expect,test, vitest } from "vitest";
 import {set,loadCart,addItemToCart} from "./shoppingCart"
 
 
@@ -12,4 +12,6 @@ test('should load cart',()=>{
     expect(cart).toBeInstanceOf(Array);
     expect(cart.length).toBe(3);
     expect(cart[0]).toEqual({ItemId:1, Quantity:16});
+    expect(cart[1]).toEqual({ItemId:3, Quantity:4});
+    expect(cart[2]).toEqual({ItemId:4, Quantity:1});
 })
