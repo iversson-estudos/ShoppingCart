@@ -1,5 +1,5 @@
 import { expect,test, vitest } from "vitest";
-import {set,loadCart,addItemToCart} from "./shoppingCart"
+import {set,removeItemFromCartTotally,loadCart,addItemToCart} from "./shoppingCart"
 
 
 await addItemToCart(1,16);
@@ -14,4 +14,12 @@ test('should load cart',()=>{
     expect(cart[0]).toEqual({ItemId:1, Quantity:16});
     expect(cart[1]).toEqual({ItemId:3, Quantity:4});
     expect(cart[2]).toEqual({ItemId:4, Quantity:1});
+})
+
+await removeItemFromCartTotally(1);
+
+test('Should remove itens from cart',()=>{
+    expect(cart.length).toBe(2);
+    expect(cart[0]).toEqual({ItemId:3,Quantity:4});
+    expect(cart[1]).toEqual({ItemId:4,Quantity:1});
 })

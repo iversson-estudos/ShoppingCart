@@ -21,13 +21,18 @@ export async function addItemToCart(id,quantity){
     if(index>-1){
         cart[index] = {ItemId:id,Quantity:quantity};
     }else{
-         cart.push({ItemId:id,Quantity:quantity});
+         cart.push(
+            {   ItemId:id,Quantity:quantity});
     }
     
     await set(cart);
 }
 
-
+export async function removeItemFromCartTotally (id){
+    let cart = await loadCart() || [];
+    let index = cart.findIndex(item=>item.ItemId===id);
+    cart.splice(index,1);
+}
 
 
 
